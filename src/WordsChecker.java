@@ -7,11 +7,12 @@ public class WordsChecker {
 
     public WordsChecker(String text) {
         this.text = text;
-        Set<String> wordSet = new HashSet<>();git 
+
     }
 
     public void hasWord(String word) {
         String mod = text.toLowerCase().replaceAll("[.,]", "");
+        Set<String> wordSet = new HashSet<>();
         String[] wordsMas = mod.split(" ");
         for (int i = 0; i < wordsMas.length; i++) {
             wordsSet.add(wordsMas[i]);
