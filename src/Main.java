@@ -14,7 +14,7 @@ public class Main {
         long start = System.currentTimeMillis();
 
         WordsChecker checker = new WordsChecker(lorem); //создаём объект и передаём ему текст и множество
-        checker.hasWord("Sunt");
+        checker.hasWord("loRem");
 
         long finish = System.currentTimeMillis();
         long elapsed = finish - start;

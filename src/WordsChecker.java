@@ -4,18 +4,18 @@ import java.util.Set;
 public class WordsChecker {
 
     protected String text;
+    protected Set<String> wordsSet;
 
     public WordsChecker(String text) {
         this.text = text;
-        Set<String> wordsSet = new HashSet<>(); //создаем множество
+        Set<String> wordsSet = new HashSet<>();
     }
 
     public void hasWord(String word) {
         String mod = text.toLowerCase().replaceAll("[.,]", "");
-        String[] wordsMas = mod.split(" "); //заполняем массив словами
-        //Set<String> wordsSet = new HashSet<>(); //создаем множество
-        for (int i = 0; i < wordsMas.length; i++) { //идем по массиву
-            wordsSet.add(wordsMas[i]);  //добавляем слова в множество из массива
+        String[] wordsMas = mod.split(" "); //заполняем массив
+        for (int i = 0; i < wordsMas.length; i++) {
+            wordsSet.add(wordsMas[i]);
         }
         System.out.println("количество слов в тексте: " + wordsSet.size());
         String wordMod = word.toLowerCase();
