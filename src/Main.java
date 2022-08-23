@@ -8,8 +8,13 @@ public class Main {
 
 
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
+
         WordsChecker checker = new WordsChecker(lorem);
         checker.hasWord("Sunt");
 
+        long finish = System.currentTimeMillis();
+        long elapsed = finish - start;
+        System.out.println("время работы программы: " + elapsed);
     }
 }
