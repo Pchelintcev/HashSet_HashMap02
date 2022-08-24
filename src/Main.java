@@ -1,6 +1,3 @@
-import java.util.HashSet;
-import java.util.Set;
-
 public class Main {
 
     static String lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
