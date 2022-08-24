@@ -18,6 +18,6 @@ public class Main {
 
         long finish = System.currentTimeMillis();
         long elapsed = finish - start;
-        System.out.println("время работы программы: " + elapsed);
+        System.out.println("время работы программы: " + elapsed + " миллисекунд.");
     }
 }
