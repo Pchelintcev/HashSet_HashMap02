@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
 
     static String lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
@@ -8,8 +11,13 @@ public class Main {
 
 
     public static void main(String[] args) {
-        WordsChecker checker = new WordsChecker(lorem);
-        checker.hasWord("Sunt");
+        long start = System.currentTimeMillis();
 
+        WordsChecker checker = new WordsChecker(lorem); //создаём объект и передаём ему текст и множество
+        checker.hasWord("loRem");
+
+        long finish = System.currentTimeMillis();
+        long elapsed = finish - start;
+        System.out.println("время работы программы: " + elapsed + " миллисекунд.");
     }
 }

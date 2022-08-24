@@ -1,21 +1,20 @@
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
 public class WordsChecker {
-
     protected String text;
+    protected Set<String> wordsSet;
 
     public WordsChecker(String text) {
         this.text = text;
+        wordsSet = new HashSet<>();
     }
 
     public void hasWord(String word) {
         String mod = text.toLowerCase().replaceAll("[.,]", "");
-        String[] wordsMas = mod.split(" "); //заполняем массив словами
-        Set<String> wordsSet = new HashSet<>(); //создаем множество
-        for (int i = 0; i < wordsMas.length; i++) { //идем по массиву
-            wordsSet.add(wordsMas[i]);  //добавляем слова в множество из массива
-        }
+        String[] wordsMas = mod.split(" "); //заполняем массив
+        Collections.addAll(wordsSet, wordsMas);
         System.out.println("количество слов в тексте: " + wordsSet.size());
         String wordMod = word.toLowerCase();
         if (wordsSet.contains(wordMod)) {
